@@ -4,10 +4,11 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+const apiKey1= import.meta.env.VITE_FIREBASE_API_KEY;
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCPu-FnmK7rdJ4nMdIGHAA2s0J_ENCxA4Q",
+  apiKey: apiKey1,
   authDomain: "greentechservices.firebaseapp.com",
   projectId: "greentechservices",
   storageBucket: "greentechservices.appspot.com",
