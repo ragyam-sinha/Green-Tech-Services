@@ -2,11 +2,11 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-const apiKey1= import.meta.env.VITE_FIREBASE_API_KEY;
 
-// Your web app's Firebase configuration
+// Read API key from .env (Vite)
+const apiKey1 = import.meta.env.VITE_FIREBASE_API_KEY;
+//console.log(apiKey1);
+// Firebase configuration
 const firebaseConfig = {
   apiKey: apiKey1,
   authDomain: "greentechservices.firebaseapp.com",
@@ -18,5 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const auth=getAuth(app);
-export const db=getFirestore();
+
+// Initialize services WITH app
+export const auth = getAuth(app);
+export const db = getFirestore(app);
